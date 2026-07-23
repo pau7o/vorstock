@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Usuários | VorStock</title>
+
+    <link
+        rel="stylesheet"
+        href="./usuarios.css"
+    >
+</head>
+
+<body>
+
+    <!-- ===============================
+         SIDEBAR
+    ================================ -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo-icone">
+                V
+            </div>
+
+            <div class="logo-texto">
+                <h2>VorStock</h2>
+                <span>Vortech</span>
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <p class="menu-titulo">
+                MENU PRINCIPAL
+            </p>
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item"
+            >
+                <span class="menu-icone">⌂</span>
+                Dashboard
+            </a>
+
+
+            <a
+                href="pastilhas.html"
+                class="menu-item"
+            >
+                <span class="menu-icone">▣</span>
+                Estoque
+            </a>
+
+
+            <!--<a
+                href="pastilhas.html"
+                class="menu-item"
+            >
+                <span class="menu-icone">＋</span>
+                Cadastrar pastilha
+            </a>-->
+
+
+            <a
+                href="relatorios.html"
+                class="menu-item"
+            >
+                <span class="menu-icone">▤</span>
+                Central de Relatórios
+            </a>
+
+
+            <a
+                href="usuarios.html"
+                class="menu-item ativo"
+            >
+                <span class="menu-icone">♙</span>
+                Usuários
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-rodape">
+
+            <div class="usuario-sidebar">
+
+                <div class="avatar">
+                    US
+                </div>
+
+                <div class="usuario-info">
+
+                    <strong id="nomeUsuarioLogado">
+                        Usuário
+                    </strong>
+
+                    <span id="perfilUsuarioLogado">
+                        VorStock
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnLogout"
+                class="btn-logout"
+            >
+                Sair
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ===============================
+         CONTEÚDO PRINCIPAL
+    ================================ -->
+
+    <main class="conteudo-principal">
+
+        <!-- TOPO -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="topbar-subtitulo">
+                    Administração
+                </p>
+
+                <h1>
+                    Usuários
+                </h1>
+
+            </div>
+
+
+            <div class="topbar-data">
+
+                <span>
+                    VorStock
+                </span>
+
+                <strong>
+                    Gestão de Acessos
+                </strong>
+
+            </div>
+
+        </header>
+
+
+        <!-- ===============================
+             CARDS
+        ================================ -->
+
+        <section class="cards">
+
+            <article class="card">
+
+                <div class="card-icone">
+                    ♙
+                </div>
+
+                <div class="card-info">
+
+                    <span>
+                        Total de usuários
+                    </span>
+
+                    <strong id="totalUsuarios">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icone">
+                    ★
+                </div>
+
+                <div class="card-info">
+
+                    <span>
+                        Administradores
+                    </span>
+
+                    <strong id="totalAdministradores">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icone">
+                    ✓
+                </div>
+
+                <div class="card-info">
+
+                    <span>
+                        Usuários ativos
+                    </span>
+
+                    <strong id="totalUsuariosAtivos">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- ===============================
+             FORMULÁRIO
+        ================================ -->
+
+        <section class="painel formulario-painel">
+
+            <div class="painel-cabecalho">
+
+                <div>
+
+                    <span class="painel-etiqueta">
+                        CADASTRO
+                    </span>
+
+                    <h2>
+                        Novo usuário
+                    </h2>
+
+                    <p>
+                        Cadastre um novo usuário e defina o nível de acesso
+                        ao sistema.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="formulario-usuario">
+
+                <div class="campo">
+
+                    <label for="nome">
+                        Nome completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Nome do usuário"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="usuario">
+                        Usuário
+                    </label>
+
+                    <input
+                        type="text"
+                        id="usuario"
+                        placeholder="Nome de acesso"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Digite uma senha"
+                        autocomplete="new-password"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="confirmarSenha">
+                        Confirmar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        placeholder="Repita a senha"
+                        autocomplete="new-password"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="perfil">
+                        Perfil
+                    </label>
+
+                    <select id="perfil">
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Administrador">
+                            Administrador
+                        </option>
+
+                        <option value="Usuário">
+                            Usuário
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="status">
+                        Status
+                    </label>
+
+                    <select id="status">
+
+                        <option value="Ativo">
+                            Ativo
+                        </option>
+
+                        <option value="Inativo">
+                            Inativo
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo campo-botao">
+
+                    <button
+                        type="button"
+                        id="btnCadastrarUsuario"
+                        class="btn-cadastrar"
+                    >
+                        Cadastrar usuário
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===============================
+             TABELA
+        ================================ -->
+
+        <section class="painel tabela-painel">
+
+            <div class="painel-cabecalho usuarios-cabecalho">
+
+                <div>
+
+                    <span class="painel-etiqueta">
+                        ACESSOS
+                    </span>
+
+                    <h2>
+                        Usuários cadastrados
+                    </h2>
+
+                    <p>
+                        Consulte os usuários que possuem acesso ao VorStock.
+                    </p>
+
+                </div>
+
+
+                <div class="campo-pesquisa">
+
+                    <input
+                        type="search"
+                        id="pesquisaUsuarios"
+                        placeholder="Pesquisar nome ou usuário"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Nome</th>
+                            <th>Usuário</th>
+                            <th>Perfil</th>
+                            <th>Status</th>
+                            <th>Data de cadastro</th>
+                            <th>Ações</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tabelaUsuarios">
+
+                        <tr>
+
+                            <td colspan="6">
+                                Nenhum usuário cadastrado.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===============================
+             RODAPÉ
+        ================================ -->
+
+        <footer class="rodape">
+
+            <span>
+                VorStock — Gestão Inteligente de Materiais
+            </span>
+
+            <span>
+                Desenvolvido por Vortech © 2026
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="./usuarios.js"></script>
+
+</body>
+
+</html>

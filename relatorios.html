@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Relatórios | VorStock</title>
+
+    <link
+        rel="stylesheet"
+        href="./relatorios.css"
+    >
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="logo-area">
+
+                <div class="logo-icone">
+                    V
+                </div>
+
+                <div class="logo-texto">
+                    <h1>VorStock</h1>
+                    <span>VORTECH</span>
+                </div>
+
+            </div>
+
+            <nav class="menu">
+
+                <span class="menu-titulo">
+                    Menu principal
+                </span>
+
+                <a
+                    href="dashboard.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">⌂</span>
+                    Dashboard
+                </a>
+
+                <a
+                    href="pastilhas.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">▣</span>
+                    Estoque
+                </a>
+
+                <!--<a
+                    href="pastilhas.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icone">＋</span>
+                    Cadastro de Pastilhas
+                </a>-->
+
+                <a
+                    href="relatorios.html"
+                    class="menu-item ativo"
+                >
+                    <span class="menu-icone">▤</span>
+                    Central de Relatórios
+                </a>
+
+                <a
+                    href="usuarios.html"
+                    class="menu-item admin-only"
+                >
+                    <span class="menu-icone">♙</span>
+                    Usuários
+                </a>
+
+            </nav>
+
+            <div class="sidebar-rodape">
+
+                <div class="usuario-sidebar">
+
+                    <div
+                        class="avatar"
+                        id="avatarUsuario"
+                    >
+                        U
+                    </div>
+
+                    <div class="dados-usuario">
+
+                        <strong id="nomeUsuarioLogado">
+                            Usuário
+                        </strong>
+
+                        <span id="perfilUsuarioLogado">
+                            VorStock
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn-logout"
+                    id="btnLogout"
+                >
+                    Sair do sistema
+                </button>
+
+            </div>
+
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+
+        <main class="conteudo">
+
+            <header class="topo">
+
+                <div class="topo-texto">
+
+                    <h2>
+                        Relatórios de Entregas
+                    </h2>
+
+                    <p>
+                        Consulte, filtre, imprima e exporte as movimentações registradas.
+                    </p>
+
+                </div>
+
+                <div class="topo-acoes">
+
+                    <button
+                        type="button"
+                        class="btn btn-secundario"
+                        id="btnImprimir"
+                    >
+                        Imprimir
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-primario"
+                        id="btnExportarPDF"
+                    >
+                        Exportar PDF
+                    </button>
+
+                </div>
+
+            </header>
+
+            <!-- CARDS -->
+
+            <section class="cards">
+
+                <article class="card">
+
+                    <div class="card-cabecalho">
+
+                        <span>
+                            Total de entregas
+                        </span>
+
+                        <div class="card-icone">
+                            ▤
+                        </div>
+
+                    </div>
+
+                    <strong id="totalEntregas">
+                        0
+                    </strong>
+
+                    <small>
+                        Registros encontrados
+                    </small>
+
+                </article>
+
+                <article class="card">
+
+                    <div class="card-cabecalho">
+
+                        <span>
+                            Itens entregues
+                        </span>
+
+                        <div class="card-icone">
+                            ▣
+                        </div>
+
+                    </div>
+
+                    <strong id="totalItensEntregues">
+                        0
+                    </strong>
+
+                    <small>
+                        Quantidade total
+                    </small>
+
+                </article>
+
+                <article class="card">
+
+                    <div class="card-cabecalho">
+
+                        <span>
+                            Operadores
+                        </span>
+
+                        <div class="card-icone">
+                            ♙
+                        </div>
+
+                    </div>
+
+                    <strong id="totalOperadores">
+                        0
+                    </strong>
+
+                    <small>
+                        Operadores diferentes
+                    </small>
+
+                </article>
+
+                <article class="card">
+
+                    <div class="card-cabecalho">
+
+                        <span>
+                            Códigos movimentados
+                        </span>
+
+                        <div class="card-icone">
+                            #
+                        </div>
+
+                    </div>
+
+                    <strong id="totalCodigos">
+                        0
+                    </strong>
+
+                    <small>
+                        Materiais diferentes
+                    </small>
+
+                </article>
+
+            </section>
+
+            <!-- FILTROS -->
+
+            <section class="painel painel-filtros">
+
+                <div class="painel-cabecalho">
+
+                    <div>
+
+                        <h3>
+                            Filtros do relatório
+                        </h3>
+
+                        <p>
+                            Selecione o período ou pesquise informações específicas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="filtros">
+
+                    <div class="campo">
+
+                        <label for="dataInicial">
+                            Data inicial
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dataInicial"
+                        >
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="dataFinal">
+                            Data final
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dataFinal"
+                        >
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="filtroOperador">
+                            Operador
+                        </label>
+
+                        <input
+                            type="text"
+                            id="filtroOperador"
+                            placeholder="Nome do operador"
+                        >
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="filtroCodigo">
+                            Código ou lote
+                        </label>
+
+                        <input
+                            type="text"
+                            id="filtroCodigo"
+                            placeholder="Digite o código ou lote"
+                        >
+
+                    </div>
+
+                    <div class="acoes-filtros">
+
+                        <button
+                            type="button"
+                            class="btn btn-primario"
+                            id="btnFiltrar"
+                        >
+                            Filtrar
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-secundario"
+                            id="btnLimparFiltros"
+                        >
+                            Limpar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- TABELA -->
+
+            <section class="painel">
+
+                <div class="painel-cabecalho">
+
+                    <div>
+
+                        <h3>
+                            Movimentações registradas
+                        </h3>
+
+                        <p id="textoResultado">
+                            Exibindo todas as entregas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="tabela-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Data</th>
+                                <th>Hora</th>
+                                <th>Operador</th>
+                                <th>Código</th>
+                                <th>Lote</th>
+                                <th>Quantidade</th>
+                                <th>Registrado por</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tabelaRelatorios">
+
+                            <tr>
+
+                                <td
+                                    colspan="7"
+                                    class="mensagem-vazia"
+                                >
+                                    Nenhuma entrega registrada.
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <footer class="rodape">
+
+                VorStock — Gestão Inteligente de Materiais
+
+                <br>
+
+                Desenvolvido por Vortech © 2026
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="./relatorios.js"></script>
+
+</body>
+
+</html>

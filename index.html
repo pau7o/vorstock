@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Acesso ao VorStock — Sistema de Gestão Inteligente de Materiais."
+    >
+
+    <title>Login | VorStock</title>
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+</head>
+
+<body class="login-body">
+
+    <main class="login-container">
+
+        <!-- LADO INSTITUCIONAL -->
+        <section class="login-apresentacao">
+
+            <div class="marca">
+
+                <div class="marca-icone">
+                    V
+                </div>
+
+                <div class="marca-texto">
+                    <strong>VorStock</strong>
+                    <span>Gestão Inteligente de Materiais</span>
+                </div>
+
+            </div>
+
+            <div class="apresentacao-conteudo">
+
+                <span class="apresentacao-etiqueta">
+                    CONTROLE DE ALMOXARIFADO
+                </span>
+
+                <h1>
+                    Controle seu estoque com mais segurança e eficiência.
+                </h1>
+
+                <p>
+                    Gerencie pastilhas, entregas, usuários e relatórios
+                    em um único sistema.
+                </p>
+
+                <div class="recursos">
+
+                    <div class="recurso-item">
+                        <div class="recurso-icone">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>Controle de estoque</strong>
+
+                            <span>
+                                Acompanhe quantidades, códigos e lotes.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="recurso-item">
+                        <div class="recurso-icone">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>Registro de entregas</strong>
+
+                            <span>
+                                Consulte todas as movimentações realizadas.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="recurso-item">
+                        <div class="recurso-icone">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>Relatórios profissionais</strong>
+
+                            <span>
+                                Exporte relatórios padronizados em PDF.
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="apresentacao-rodape">
+                Desenvolvido por Vortech © 2026
+            </div>
+
+        </section>
+
+
+        <!-- ÁREA DE LOGIN -->
+        <section class="login-area">
+
+            <div class="login-box">
+
+                <div class="login-cabecalho">
+
+                    <div class="login-logo-mobile">
+                        V
+                    </div>
+
+                    <span class="login-etiqueta">
+                        ACESSO AO SISTEMA
+                    </span>
+
+                    <h2>Bem-vindo ao VorStock</h2>
+
+                    <p>
+                        Informe seu usuário e senha para continuar.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="formLogin"
+                    class="login-formulario"
+                    autocomplete="on"
+                >
+
+                    <div class="campo-login">
+
+                        <label for="usuario">
+                            Usuário
+                        </label>
+
+                        <div class="input-container">
+
+                            <span class="input-icone">
+                                👤
+                            </span>
+
+                            <input
+                                type="text"
+                                id="usuario"
+                                name="usuario"
+                                placeholder="Digite seu usuário"
+                                autocomplete="username"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo-login">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="input-container">
+
+                            <span class="input-icone">
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Digite sua senha"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="btnMostrarSenha"
+                                class="btn-mostrar-senha"
+                                aria-label="Mostrar ou ocultar senha"
+                                title="Mostrar senha"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="opcoes-login">
+
+                        <label class="lembrar-usuario">
+
+                            <input
+                                type="checkbox"
+                                id="lembrarUsuario"
+                            >
+
+                            <span>Lembrar usuário</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="btnEntrar"
+                        class="btn-entrar"
+                    >
+                        <span>Entrar no sistema</span>
+
+                        <span class="btn-seta">
+                            →
+                        </span>
+                    </button>
+
+
+                    <div
+                        id="erro"
+                        class="erro"
+                        role="alert"
+                        aria-live="polite"
+                    ></div>
+
+                </form>
+
+
+                <div class="login-seguranca">
+
+                    <span class="seguranca-icone">
+                        🛡️
+                    </span>
+
+                    <span>
+                        Acesso restrito a usuários autorizados.
+                    </span>
+
+                </div>
+
+
+                <footer class="login-rodape">
+
+                    <strong>VorStock</strong>
+
+                    <span>
+                        Gestão Inteligente de Materiais
+                    </span>
+
+                </footer>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="./login.js"></script>
+
+</body>
+
+</html>

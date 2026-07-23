@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | VorStock</title>
+
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo-icone">
+                V
+            </div>
+
+            <div class="logo-texto">
+                <h2>VorStock</h2>
+                <span>Vortech</span>
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <p class="menu-titulo">
+                MENU PRINCIPAL
+            </p>
+
+            
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item ativo"
+            >
+                <span class="menu-icone">⌂</span>
+                Dashboard
+            </a>
+
+
+            <a
+                href="pastilhas.html"
+                class="menu-item"
+            >
+                <span class="menu-icone">▣</span>
+                Estoque
+            </a>
+
+
+            <!--<a
+                href="pastilhas.html"
+                class="menu-item"
+            >
+                <span class="menu-icone">＋</span>
+                Cadastrar pastilha
+            </a>-->
+
+
+            <a
+                href="relatorios.html"
+                class="menu-item"
+            >
+                <span class="menu-icone">▤</span>
+                Central de Relatórios
+            </a>
+
+
+            <a
+                href="usuarios.html"
+                class="menu-item"
+            >
+                <span class="menu-icone">♙</span>
+                Usuários
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-rodape">
+
+            <div class="usuario-sidebar">
+
+                <div class="avatar">
+                    US
+                </div>
+
+                <div class="usuario-info">
+
+                    <strong id="nomeUsuario">
+                        Usuário
+                    </strong>
+
+                    <span>
+                        VorStock
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnLogout"
+                class="btn-logout"
+            >
+                Sair
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================
+         CONTEÚDO PRINCIPAL
+    ====================================== -->
+
+    <main class="conteudo-principal">
+
+        <!-- TOPO -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="topbar-subtitulo">
+                    Controle de estoque
+                </p>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+            </div>
+
+
+            <div class="topbar-data">
+
+                <span>
+                    VorStock
+                </span>
+
+                <strong>
+                    Gestão de Materiais
+                </strong>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================
+             CARDS
+        ====================================== -->
+
+        <section class="cards">
+
+            <article class="card">
+
+                <div class="card-icone">
+                    ▤
+                </div>
+
+                <div class="card-info">
+
+                    <span>
+                        Total de entregas
+                    </span>
+
+                    <strong id="totalEntregas">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icone">
+                    ♙
+                </div>
+
+                <div class="card-info">
+
+                    <span>
+                        Operadores atendidos
+                    </span>
+
+                    <strong id="totalOperadores">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icone">
+                    ▣
+                </div>
+
+                <div class="card-info">
+
+                    <span>
+                        Pastilhas cadastradas
+                    </span>
+
+                    <strong id="totalPastilhas">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =====================================
+             FORMULÁRIO DE ENTREGA
+        ====================================== -->
+
+        <section class="painel formulario-painel">
+
+            <div class="painel-cabecalho">
+
+                <div>
+
+                    <span class="painel-etiqueta">
+                        MOVIMENTAÇÃO
+                    </span>
+
+                    <h2>
+                        Registrar entrega
+                    </h2>
+
+                    <p>
+                        Informe os dados para retirar a quantidade
+                        do lote correto no estoque.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="formulario-entrega">
+
+                <div class="campo">
+
+                    <label for="operador">
+                        Operador
+                    </label>
+
+                    <input
+                        type="text"
+                        id="operador"
+                        placeholder="Nome do operador"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="codigo">
+                        Código da pastilha
+                    </label>
+
+                    <input
+                        type="text"
+                        id="codigo"
+                        placeholder="Ex.: PA-001"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="lote">
+                        Lote
+                    </label>
+
+                    <input
+                        type="text"
+                        id="lote"
+                        placeholder="Informe o lote"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="quantidade">
+                        Quantidade
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantidade"
+                        placeholder="0"
+                        min="1"
+                        step="1"
+                    >
+
+                </div>
+
+
+                <div class="campo campo-botao">
+
+                    <button
+                        type="button"
+                        id="btnRegistrar"
+                        class="btn-registrar"
+                    >
+                        Registrar entrega
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             HISTÓRICO
+        ====================================== -->
+
+        <section class="painel tabela-painel">
+
+            <div class="painel-cabecalho historico-cabecalho">
+
+                <div>
+
+                    <span class="painel-etiqueta">
+                        HISTÓRICO
+                    </span>
+
+                    <h2>
+                        Entregas registradas
+                    </h2>
+
+                    <p>
+                        Consulte as movimentações realizadas no sistema.
+                    </p>
+
+                </div>
+
+
+                <div class="campo-pesquisa">
+
+                    <input
+                        type="search"
+                        id="pesquisa"
+                        placeholder="Pesquisar operador, código ou lote"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Data</th>
+
+                            <th>Hora</th>
+
+                            <th>Operador</th>
+
+                            <th>Código</th>
+
+                            <th>Lote</th>
+
+                            <th>Quantidade</th>
+
+                            <th>Registrado por</th>
+
+                            <th>Ações</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tabelaEntregas">
+
+                        <tr>
+
+                            <td colspan="8">
+                                Nenhuma entrega registrada.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             RODAPÉ
+        ====================================== -->
+
+        <footer class="rodape">
+
+            <span>
+                VorStock — Gestão Inteligente de Materiais
+            </span>
+
+            <span>
+                Desenvolvido por Vortech © 2026
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="./dashboard.js"></script>
+
+</body>
+
+</html>

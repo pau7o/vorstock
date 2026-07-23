@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pastilhas | VorStock</title>
+
+    <link
+        rel="stylesheet"
+        href="./pastilha.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo-icone">
+                V
+            </div>
+
+            <div class="logo-texto">
+                <h2>VorStock</h2>
+                <span>Vortech</span>
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <p class="menu-titulo">
+                MENU PRINCIPAL
+            </p>
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item"
+            >
+                <span class="menu-icone">⌂</span>
+                Dashboard
+            </a>
+
+
+            <a
+                href="pastilhas.html"
+                class="menu-item ativo"
+            >
+                <span class="menu-icone">▣</span>
+                Estoque
+            </a>
+
+
+            <!--<a
+                href="pastilhas.html"
+                class="menu-item"
+            >
+                <span class="menu-icone">＋</span>
+                Cadastrar pastilha
+            </a>-->
+
+
+            <a
+                href="relatorios.html"
+                class="menu-item"
+            >
+                <span class="menu-icone">▤</span>
+                Central de Relatórios
+            </a>
+
+
+            <a
+                href="usuarios.html"
+                class="menu-item"
+            >
+                <span class="menu-icone">♙</span>
+                Usuários
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-rodape">
+
+            <div class="usuario-sidebar">
+
+                <div class="avatar">
+                    US
+                </div>
+
+                <div class="usuario-info">
+
+                    <strong id="nomeUsuario">
+                        Usuário
+                    </strong>
+
+                    <span>
+                        VorStock
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnLogout"
+                class="btn-logout"
+            >
+                Sair
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================
+         CONTEÚDO PRINCIPAL
+    ====================================== -->
+
+    <main class="conteudo-principal">
+
+        <!-- TOPO -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="topbar-subtitulo">
+                    Controle de estoque
+                </p>
+
+                <h1>
+                    Pastilhas
+                </h1>
+
+            </div>
+
+
+            <div class="topbar-data">
+
+                <span>
+                    VorStock
+                </span>
+
+                <strong>
+                    Gestão de Materiais
+                </strong>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================
+             CARDS
+        ====================================== -->
+
+        <section class="cards">
+
+            <article class="card">
+
+                <div class="card-icone">
+                    ▣
+                </div>
+
+                <div class="card-info">
+
+                    <span>
+                        Total de pastilhas
+                    </span>
+
+                    <strong id="totalPastilhas">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icone">
+                    !
+                </div>
+
+                <div class="card-info">
+
+                    <span>
+                        Estoque baixo
+                    </span>
+
+                    <strong id="estoqueBaixo">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-icone">
+                    #
+                </div>
+
+                <div class="card-info">
+
+                    <span>
+                        Quantidade total
+                    </span>
+
+                    <strong id="quantidadeTotal">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =====================================
+             FORMULÁRIO
+        ====================================== -->
+
+        <section class="painel formulario-painel">
+
+            <div class="painel-cabecalho">
+
+                <div>
+
+                    <span class="painel-etiqueta">
+                        CADASTRO
+                    </span>
+
+                    <h2>
+                        Nova pastilha
+                    </h2>
+
+                    <p>
+                        Informe os dados da pastilha e do lote para adicionar
+                        o material ao estoque.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="formulario-pastilha">
+
+                <div class="campo">
+
+                    <label for="codigo">
+                        Código
+                    </label>
+
+                    <input
+                        type="text"
+                        id="codigo"
+                        placeholder="Ex.: PA-001"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="descricao">
+                        Descrição
+                    </label>
+
+                    <input
+                        type="text"
+                        id="descricao"
+                        placeholder="Descrição da pastilha"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="fabricante">
+                        Fabricante
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fabricante"
+                        placeholder="Nome do fabricante"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="lote">
+                        Lote
+                    </label>
+
+                    <input
+                        type="text"
+                        id="lote"
+                        placeholder="Número do lote"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="quantidade">
+                        Quantidade
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantidade"
+                        placeholder="0"
+                        min="1"
+                        step="1"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="estoqueMinimo">
+                        Estoque mínimo
+                    </label>
+
+                    <input
+                        type="number"
+                        id="estoqueMinimo"
+                        placeholder="0"
+                        min="0"
+                        step="1"
+                    >
+
+                </div>
+
+
+                <div class="campo campo-botao">
+
+                    <button
+                        type="button"
+                        id="btnCadastrarPastilha"
+                        class="btn-cadastrar"
+                    >
+                        Cadastrar pastilha
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ESTOQUE
+        ====================================== -->
+
+        <section class="painel tabela-painel">
+
+            <div class="painel-cabecalho estoque-cabecalho">
+
+                <div>
+
+                    <span class="painel-etiqueta">
+                        ESTOQUE
+                    </span>
+
+                    <h2>
+                        Estoque de pastilhas
+                    </h2>
+
+                    <p>
+                        Consulte os códigos, lotes e quantidades cadastradas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Código</th>
+                            <th>Descrição</th>
+                            <th>Fabricante</th>
+                            <th>Lote</th>
+                            <th>Quantidade</th>
+                            <th>Status</th>
+                            <th>Ação</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tabelaPastilhas">
+
+                        <tr>
+
+                            <td colspan="7">
+                                Nenhuma pastilha cadastrada.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             RODAPÉ
+        ====================================== -->
+
+        <footer class="rodape">
+
+            <span>
+                VorStock — Gestão Inteligente de Materiais
+            </span>
+
+            <span>
+                Desenvolvido por Vortech © 2026
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="./pastilhas.js"></script>
+
+</body>
+
+</html>
